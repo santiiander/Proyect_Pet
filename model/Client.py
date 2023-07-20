@@ -1,47 +1,48 @@
 class Client:
-    def __init__(self,ID,DNI,nombre,apellido,direccion,celular,IDmascosta):
-        self.ID=ID
-        self.DNI=DNI
+    def __init__(self,ID=0,nombre="",apellido="",dni=0,direccion="",email="",numeroTelef=0,mascota=""):
+        self.id=ID
+        self.dni=dni
         self.nombre=nombre
         self.apellido=apellido
         self.direccion=direccion
-        self.celular=celular
-        self.IDmascota=IDmascosta
+        self.numeroTelef=numeroTelef
+        self.email=email
+        self.mascota=mascota
 
-    #definimos los seters 
+    #Metodo To String para llamar a cada persona
+    def __str__(self) -> str:
+        return f"ID: {self.id}\nDNI: {self.dni}\nNombre: {self.nombre}\nApellido: {self.apellido}\nDireccion: {self.direccion}\nNumero Telefonico: {self.numeroTelef}\nEmail: {self.email}\nDueño de: {self.mascota}\n--------------------"
+    
+    #Metodos seters y geters para llamar a los datos o modoficarlos
 
-    def setDNI(self,dato):
-        self.DNI=dato
-    def setNombre(self,dato):
-        self.nombre=dato
-    def setApellido(self,dato):
-        self.apellido=dato
-    def setDireccion(self,dato):
-        self.direccion=dato
-    def setCelular(self,dato):
-        self.celular=dato
-    def setIDMascosta(self,dato):
-        self.IDmascota=dato       
-
-    #definimos los geters
-
-    def getID(self):
-        return self.ID
-    def getDNI(self):
-        return self.DNI
     def getNombre(self):
         return self.nombre
     def getApellido(self):
         return self.apellido
+    def getDNI(self):
+        return self.dni
     def getDireccion(self):
         return self.direccion
-    def getCelular(self):
-        return self.direccion
-    def getMascotaID(self):
-        return self.IDmascota
+    def getEmail(self):
+        return self.email
+    def getNum(self):
+        return self.numeroTelef
+    def getMascota(self):
+        return self.mascota
+
+    def set_nombre(self, dato):
+        self.nombre = dato
+    def set_apellido(self, dato):
+        self.apellido = dato
+    def set_dni(self, dato):
+        self.dni = dato
+    def set_direccion(self, dato):
+        self.direccion = dato    
+    def set_num_telefono(self, dato):
+        self.numeroTelef = dato
+    def set_mascota(self, dato):
+        self.mascota = dato
     
-    def __str__(self) -> str:
-        return f"\nNombre: {self.nombre}\nApellido: {self.apellido}\nDNI: {self.DNI}\nDireccion: {self.direccion}\nCelular: {self.celular}\nID: {self.ID}"
-    
-Santiago=Client(1,44297673,"Santiago","Andermatten","Avenida Universidad 192",3472468850,1)
-print(Santiago)
+
+
+

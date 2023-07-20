@@ -1,27 +1,31 @@
 class Date:
-    def __init__(self,Duenio,Mascota,Fecha,Presupuesto):
-        self.Duenio=Duenio
-        self.Mascota=Mascota
-        self.Fecha=Fecha
-        self.Presupuesto=Presupuesto
+    def __init__(self, asunto="", precio=0, fecha=0, cliente="", mascota=""):
+        self.asunto = asunto
+        self.precio = precio
+        self.fecha = fecha
+        self.cliente = cliente
+        self.mascota = mascota
 
-    # Setters
-    def setDuenio(self, dato):
-        self.Duenio = dato
-    def setMascota(self, dato):
-        self.Mascota = dato
-    def setFecha(self, dato):
-        self.Fecha = dato
-    def setPresupuesto(self, dato):
-        self.Presupuesto = dato
+    def __str__(self) -> str:
+        return f"La sita fue solicitada por:{self.asunto}\nLa Fecha de la misma es el:{self.fecha}\nPrecio:{self.precio}\nLa reserva fue solicitada por:{self.cliente}\nPara:{self.mascota}"
 
-    # Getters
-    def getDuenio(self):
-        return self.Duenio
-    def getMascota(self):
-        return self.Mascota
-    def getFecha(self):
-        return self.Fecha
-    def getPresupuesto(self):
-        return self.Presupuesto
-        
+    def get_asunto(self):
+        return self.asunto
+    def set_asunto(self, asunto):
+        self.asunto = asunto
+    def get_precio(self):
+        return self.precio
+    def set_precio(self, precio):
+        self.precio = precio
+    def get_fecha(self):
+        return self.fecha
+    def set_fecha(self, fecha):
+        self.fecha = fecha
+    def get_cliente(self):
+        return self.cliente
+    def set_cliente(self, cliente):
+        self.cliente = cliente
+    def get_mascota(self):
+        return self.mascota
+    def set_mascota(self, mascota):
+        self.mascota = mascota
