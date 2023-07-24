@@ -1,7 +1,8 @@
 class Client:
-    def __init__(self,ID=0,nombre="",apellido="",dni=0,direccion="",email="",numeroTelef=0,mascota=""):
+    clients=[]
+    def __init__(self,ID=0,DNI=0,nombre="",apellido="",direccion="",numeroTelef=0,email="",mascota=""):
         self.id=ID
-        self.dni=dni
+        self.DNI=DNI
         self.nombre=nombre
         self.apellido=apellido
         self.direccion=direccion
@@ -11,7 +12,7 @@ class Client:
 
     #Metodo To String para llamar a cada persona
     def __str__(self) -> str:
-        return f"ID: {self.id}\nDNI: {self.dni}\nNombre: {self.nombre}\nApellido: {self.apellido}\nDireccion: {self.direccion}\nNumero Telefonico: {self.numeroTelef}\nEmail: {self.email}\nDueño de: {self.mascota}\n--------------------"
+        return f"ID: {self.id}\nDNI: {self.DNI}\nNombre: {self.nombre}\nApellido: {self.apellido}\nDireccion: {self.direccion}\nNumero Telefonico: {self.numeroTelef}\nEmail: {self.email}\nDueño de: {self.mascota}\n--------------------"
     
     #Metodos seters y geters para llamar a los datos o modoficarlos
 

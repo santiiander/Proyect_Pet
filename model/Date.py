@@ -7,7 +7,7 @@ class Date:
         self.mascota = mascota
 
     def __str__(self) -> str:
-        return f"La sita fue solicitada por:{self.asunto}\nLa Fecha de la misma es el:{self.fecha}\nPrecio:{self.precio}\nLa reserva fue solicitada por:{self.cliente}\nPara:{self.mascota}"
+        return f"ID Cita: {self.id}\nLa sita fue solicitada por:{self.asunto}\nLa Fecha de la misma es el:{self.fecha}\nPrecio:{self.precio}\nLa reserva fue solicitada por:{self.cliente}\nPara:{self.mascota}"
 
     def get_asunto(self):
         return self.asunto

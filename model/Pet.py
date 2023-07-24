@@ -1,9 +1,11 @@
 class Pet:
-    def __init__(self,nombre="",altura=0,peso=0,color=""):
+    def __init__(self,id=0,nombre="",altura=0,peso=0,descripcion=""):
+        self.id=id
         self.nombre=nombre
         self.altura=altura
         self.peso=peso
-        self.color=color
+        self.descripcion=descripcion
+        
 
     def __str__(self) -> str:
         return f"Nombre: {self.nombre}\nAltura: {self.altura}\nPeso: {self.peso}\nColor: {self.color}\n"
