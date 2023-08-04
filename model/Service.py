@@ -1,6 +1,6 @@
 class Service:
     services=[]
-    def __init__(self,nombre="",precio=0) -> None:
+    def __init__(self,nombre="",precio=0):
         self.nombre=nombre
         self.precio=precio
 
